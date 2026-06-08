@@ -97,3 +97,19 @@ fetch('assets/new-rd.svg')
         Reveal.sync();
         Reveal.layout();
     });
+
+fetch('assets/reveal-ex.svg')
+    .then(r => r.text())
+    .then(svg => {
+        document.getElementById('reveal-ex').innerHTML = svg;
+        Reveal.sync();
+        Reveal.layout();
+    });
+
+fetch('assets/recap.svg')
+    .then(r => r.text())
+    .then(svg => {
+        document.getElementById('recap').innerHTML = svg;
+        Reveal.sync();
+        Reveal.layout();
+    });
