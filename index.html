@@ -96,13 +96,13 @@
 							<h2 style="margin-bottom:-10pt; color:#0042b3; font-weight: bold;">
 							Customer
 							</h2>
-							<img src="assets/incognito.svg" height="5%" style="margin-bottom: 40pt"/>
+							<img src="assets/incognito.svg" height="5%" style="margin-bottom: 10%"/>
 						</div>
 						<h2 style="margin:0; color:white; font-weight: bold;">
 							Asymmetric privacy
 						</h2>
 						<div class="fragment fade-down">
-							<img src="assets/surveillance.svg" height="5%" style="margin-top: 40pt"/>
+							<img src="assets/surveillance.svg" height="5%" style="margin-top: 10%"/>
 							<h2 style="margin-top:-10pt; color:#0042b3; font-weight: bold;">
 							Merchant
 							</h2>
@@ -267,21 +267,51 @@
 						</div>
 					</section>
 					<section data-background="white">
+						<style>
+							.box {
+								padding: 10pt;
+								border-radius: 30pt;
+								transition: filter 0.4s ease, opacity 0.3s;
+							}
+							.box.blurred {
+								filter: blur(5px);
+								opacity: 0.5;
+							}
+							.overlay {
+								padding-bottom: 20pt;
+							}
+						</style>
 						<div class="v-stack">
-							<h3 style=" margin: 30pt; color:#0042b3; font-weight: bold;">
+							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 								Change requirements (part 2)
 							</h3>
-							<div class="fragment fade-down" style="margin: 30pt;">
-								<h4> <strong>Anonymity</strong> </h4>
-								<h6 style="background-color: #0042b341; padding: 10pt; border-radius: 30pt; font-weight: normal;"> 
-									No one (except coin's owners) can correlate spent coins and change
-								</h6>
+							<div id="anon-block" style="margin: 20pt" class="fragment" data-fragment-index="1">
+								<h4><strong>Anonymity</strong></h4>
+								<div class="r-stack">
+									<h6 class="box" style="background:#0042b341; font-weight: normal;">
+										No one (except coin's owners) can correlate spent coins and change
+									</h6>
+									<h6 class="fragment fade-in overlay"
+										data-fragment-index="3"
+										data-target="anon"
+										style="font-weight: normal; color:#0042b3;">
+										Customer's responsibility
+									</h6>
+								</div>
 							</div>
-							<div class="fragment fade-down" style="margin: 30pt;">
-								<h4> <strong>Anti-money laundering</strong> </h4>
-								<h6 style="background-color: #0042b341; padding: 10pt; border-radius: 30pt; font-weight: normal;">
-									Owners can always re-obtain change from their coins
-								</h6>
+							<div id="aml-block" class="fragment" data-fragment-index="2">
+								<h4><strong>Anti-money laundering</strong></h4>
+								<div class="r-stack">
+									<h6 class="box" style="background:#0042b341; font-weight: normal;">
+										Owners can always re-obtain change from their coins
+									</h6>
+									<h6 class="fragment fade-in overlay"
+										data-fragment-index="4"
+										data-target="aml"
+										style="font-weight: normal; color:#0042b3;">
+										Exchange's responsibility
+									</h6>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -303,7 +333,7 @@
 					</section>
 					<section data-background="white">
 						<div class="v-stack">
-							<h3 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
+							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 								Refresh Derive
 							</h3>
 							<div style="width:100%; display:flex; justify-content:center;">
@@ -331,10 +361,26 @@
 					<section data-background="white">
 						<div class="v-stack">
 							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
+								What's the current problem?
+							</h3>
+							<h4 class="fragment fade-up" style="margin: 30pt; font-weight: normal;">
+								Refresh protocol exploits ability of <strong>Ed25519</strong> keys to do <strong>Curve25519 ECDH</strong>
+							</h4>
+							<h4 class="fragment fade-up box" style="background:#0042b341; margin-left: 150pt; margin-right: 150pt; font-weight: normal;">
+								Not available in PQ
+							</h4>
+							<h4 class="fragment fade-up" style="margin: 30pt; font-weight: normal;">
+								... But we need to keep <strong>signatures</strong>
+							</h4>
+						</div>
+					</section>
+					<section data-background="white">
+						<div class="v-stack">
+							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 								The idea
 							</h3>
 							<div style="width:100%; display:flex; justify-content:center;">
-								<div class="r-stack" style="width:100%;">
+								<div class="r-stack fragment fade" style="width:100%;">
 									<div id="pq-idea" style="width:100%;"></div>
 								</div>
 							</div>
@@ -386,6 +432,9 @@
 						<h3 style="margin: 40pt; color:#0042b3; font-weight: bold;">
 							Thanks for the attention!
 						</h3>
+						<img
+						src="assets/qrcode.svg"
+						style="height: 400px; background: transparent"/>
 					</div>
 				</section>
 			</div>
@@ -400,6 +449,34 @@
 				hash: true,
 				preloadIframes: true,
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+
+			Reveal.on('fragmentshown', e => {
+				const target = e.fragment.dataset.target;
+
+				if (target === "anon") {
+					document.querySelector('#anon-block .box')
+					.classList.add('blurred');
+				}
+
+				if (target === "aml") {
+					document.querySelector('#aml-block .box')
+					.classList.add('blurred');
+				}
+			});
+
+			Reveal.on('fragmenthidden', e => {
+				const target = e.fragment.dataset.target;
+
+				if (target === "anon") {
+					document.querySelector('#anon-block .box')
+					.classList.remove('blurred');
+				}
+
+				if (target === "aml") {
+					document.querySelector('#aml-block .box')
+					.classList.remove('blurred');
+				}
 			});
 		</script>
 		<script src="logic/diagram.js"></script>
