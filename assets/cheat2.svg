@@ -332,8 +332,7 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-  </defs>
-  <g id="Cheating">
+  </defs><g id="Cheating">
     <g id="rjs">
       <g id="cheat-1" data-id="cheat1">
         <g>
@@ -449,7 +448,6 @@
             </g>
             <text class="ml-cls-18" transform="translate(275.77 345.31) scale(.99 1)"><tspan x="0" y="0">B</tspan></text>
             <path class="ml-cls-8" d="M261.12,326.3c0-8.41,11.8-8.41,17.69-14.02,2.95-2.8-5.9-2.8-5.9-16.82,0-9.35,3.93-14.02,11.8-14.02s11.8,4.67,11.8,14.02c0,14.02-8.85,14.02-5.9,16.82,5.9,5.61,17.69,5.61,17.69,14.02"/>
-            </g>
           </g>  
         </g>
         <g data-id="change1">

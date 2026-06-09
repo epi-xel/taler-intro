@@ -186,18 +186,24 @@
 					</section>
 				</section>
 				<section>
-					<section data-background-iframe="assets/section.html" data-transition="slide">
-						<h2 style="color:white; font-weight: bold;">
+					<section data-background-iframe="assets/section.html" data-auto-animate>
+						<h2 data-id="pay-change" style="color:white; font-weight: bold;">
 							Payment and Change
 						</h2>
 					</section>
 					<section data-background="white" data-auto-animate>
+						<h2 data-id="pay-change" style="color:#0042b3; font-weight: bold; font-size: 36pt">
+							Payment and Change
+						</h2>
 						<div class="r-stack">
 							<div data-id="bg-an" class="fragment fade" data-fragment-index="1" style="background-color: #0042b341; margin-left: 400pt; margin-top:100pt; border-radius: 30pt; width: 350pt; height: 150pt;"> </div>
 							<div data-id="payment" class="fragment fade" data-fragment-index="0" id="payment" style="flex:1; width:100%; margin-top: 10pt;"></div>
 						</div>
 					</section>
 					<section data-background="white" data-auto-animate>
+						<h2 data-id="pay-change" style="color:#0042b3; font-weight: bold; font-size: 36pt">
+							Payment and Change
+						</h2>
 						<div class="r-stack">
 							<div data-id="bg-an" style="background-color: #0042b341; margin-left: 400pt; margin-top:100pt; border-radius: 30pt; width: 350pt; height: 300pt;"> </div>
 							<div data-id="payment" id="payment2" style="flex:1; width:100%; margin-top: 10pt;"></div>
@@ -499,42 +505,15 @@
 		<script src="dist/plugin/notes.js"></script>
 		<script src="dist/plugin/markdown.js"></script>
 		<script src="dist/plugin/highlight.js"></script>
+		<script src="logic/diagram.js"></script>
+		<script src="logic/svg.js"></script>
+		<script src="logic/blur.js"></script>
 		<script>
 			Reveal.initialize({
 				hash: true,
 				preloadIframes: true,
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
 			});
-
-			Reveal.on('fragmentshown', e => {
-				const target = e.fragment.dataset.target;
-
-				if (target === "anon") {
-					document.querySelector('#anon-block .box')
-					.classList.add('blurred');
-				}
-
-				if (target === "aml") {
-					document.querySelector('#aml-block .box')
-					.classList.add('blurred');
-				}
-			});
-
-			Reveal.on('fragmenthidden', e => {
-				const target = e.fragment.dataset.target;
-
-				if (target === "anon") {
-					document.querySelector('#anon-block .box')
-					.classList.remove('blurred');
-				}
-
-				if (target === "aml") {
-					document.querySelector('#aml-block .box')
-					.classList.remove('blurred');
-				}
-			});
 		</script>
-		<script src="logic/diagram.js"></script>
-		<script src="logic/svg.js"></script>
 	</body>
 </html>
