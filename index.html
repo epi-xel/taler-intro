@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
 		<link rel="stylesheet" href="dist/theme/taler.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 		<!-- GSAP -->
   		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -144,15 +145,49 @@
 							</div>
 						</div>
 					</section>
-					<section data-background="white" data-transition="slide">
-						<h2 style="margin-bottom:-10pt; color:#0042b3; font-weight: bold;">
+					<section data-background="white" data-transition="slide" data-auto-animate>
+						<h2 style="font-weight: bold;">
 						Ideal to be used as a digital currency
 						</h2>
+						<h2 data-id="not-only" class="fragment fade-up" style="font-weight: bold;">
+						...but not only
+						</h2>
 					</section>
-					<section data-background-iframe="https://taler-ops.ch/en/map.html" data-background-interactive data-transition="fade">
-						<h2 style="margin-top:-230pt; color:#0042b3; font-weight: bold;">
+					<section data-background="white" data-transition="slide" data-auto-animate>
+						<h2 data-id="not-only" style="color:#0042b3; font-weight: bold; margin-bottom: 30pt;">
+						...but not only
+						</h2>
+						<div class="fragment fade-down" style="font-weight: bold; margin-bottom: 30pt;">
+							<h3 style="font-weight: bold;">
+								<i style="color:#0042b3;" class="bi bi-ticket-perforated"></i>
+								Vouchers</h3>
+						</div>
+						<div class="fragment fade-down" style="font-weight: bold; margin-bottom: 30pt;">
+							<h3 style="font-weight: bold;">
+								<i style="color:#0042b3;" class="bi bi-credit-card"></i>
+								Loyalty cards</h3>
+						</div>
+						<div class="fragment fade-down" style="font-weight: bold; margin-bottom: 30pt;">
+							<h3 style="font-weight: bold;">
+								<i style="color:#0042b3;" class="bi bi-person-check"></i>
+								Online age verification</h3>
+						</div>
+						<div class="fragment fade-down" style="font-weight: bold; margin-bottom: 30pt;">
+							<h3 style="font-weight: bold;">
+								<i style="color:#0042b3;" class="bi bi-tv"></i>
+								Streaming service subscription
+							</h3>
+						</div>
+					</section>
+					<section data-background="white" data-transition="slide">
+						<h2 style="color:#0042b3; font-weight: bold;">
 						Deployed in real world!
 						</h2>
+						<h3 class="fragment fade" style="font-weight: bold;">
+						Switzerland (for now)
+						</h3>
+					</section>
+					<section data-background-iframe="https://taler-ops.ch/en/map.html" data-background-interactive data-transition="fade">
 					</section>
 				</section>
 				<!-- Taler Overview -->
@@ -170,15 +205,41 @@
 				<section>
 					<section data-background-iframe="assets/section.html" data-transition="slide">
 						<h3 style="margin:0; color:white; font-weight: bold;">
-							Cryptographic building blocks
+							A bit of cryptography
 						</h3>
 					</section>
-					<section data-background="white">
+					<!-- <section data-background="white">
 						<div class="v-stack">
 							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 								Blind Signatures (e-cash)
 							</h3>
 							<div id="bs" style="flex:1; width:100%; margin-top: 60pt;"></div>
+						</div>
+					</section> -->
+					<section data-background="white" data-auto-animate>
+						<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
+							Blind Signatures (e-cash)
+						</h3>
+						<div id="blind-sig1" data-id="blind-sig" style="flex:1; width:100%; margin-top: 60pt;"></div>
+					</section>
+					<section data-background="white" data-auto-animate>
+						<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
+							Blind Signatures (e-cash)
+						</h3>
+						<div id="blind-sig2" data-id="blind-sig" style="flex:1; width:100%; margin-top: 60pt;"></div>
+					</section>
+					<section data-background="white" data-auto-animate>
+						<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
+							Blind Signatures (e-cash)
+						</h3>
+						<div id="blind-sig3" data-id="blind-sig" style="flex:1; width:100%; margin-top: 60pt;"></div>
+					</section>
+					<section data-background="white">
+						<div class="v-stack">
+							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
+								Coins in Taler
+							</h3>
+							<div id="coin-struc" style="flex:1; width:100%; margin-top: 60pt;"></div>
 						</div>
 					</section>
 					<section data-background="white">
@@ -187,14 +248,6 @@
 								Blind Signatures (Taler)
 							</h3>
 							<div id="bs-taler" style="flex:1; width:100%; margin-top: 60pt;"></div>
-						</div>
-					</section>
-					<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								Coins
-							</h3>
-							<div id="coin-struc" style="flex:1; width:100%; margin-top: 60pt;"></div>
 						</div>
 					</section>
 				</section>
@@ -342,6 +395,13 @@
 						<h2 data-id="refresh-prot-text" class="fragment fade-up" style="margin-bottom:-10pt; font-weight: bold;">
 						Refresh protocol
 						</h2>
+					</section>
+				<!-- Refresh protocol use cases -->
+					<section data-background="white" data-transition="slide">
+						<h2 style="color:#0042b3; font-weight: bold; font-size: 36pt">
+							Use case: Streaming service subscription
+						</h2>
+						<div data-id="streaming" class="fragment fade" data-fragment-index="0" id="streaming" style="flex:1; height:100%; margin-top: 10pt;"></div>
 					</section>
 				</section>
 				<!-- Refresh protocol -->
@@ -527,10 +587,19 @@
 				<!-- Final -->
 				<section data-background="white">
 					<div class="v-stack">
-						<h4 style="color:#0042b3; font-weight: bold;">
+						<h2 style="color:#0042b3; font-weight: bold;">
+							Post-quantum?
+						</h2>
+						<h3 style="font-weight: bold;">
+							We are working on it
+						</h3>
+					</div>
+				</section>
+				<section data-background="white">
+					<div class="v-stack">
+						<h2 style="color:#0042b3; font-weight: bold;">
 							Thanks for the attention!
-						</h4>
-						<img src="assets/recap.svg" style="height: 100%; background: transparent"/>
+						</h2>
 					</div>
 				</section>
 				<section data-background="white">

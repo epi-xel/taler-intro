@@ -122,6 +122,7 @@
 		}
 	},
 	"dependencies": {
+		"bootstrap-icons": "^1.13.1",
 		"reveal.js-plugins": "^4.6.0"
 	}
 }

@@ -14,7 +14,11 @@ svgs = ['bs',
         'tsig',
         'new-rd',
         'reveal-ex',
-        'recap'
+        'recap',
+        'streaming',
+        'blind-sig1',
+        'blind-sig2',
+        'blind-sig3'
         ]
 
 svgs.forEach(s => {

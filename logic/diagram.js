@@ -1,25 +1,27 @@
-fetch('assets/diagram.svg')
-    .then(r => r.text())
-    .then(svg => {
-        document.getElementById('diagram').innerHTML = svg;
-        initAnimation();
-});
-
 const stepQueue = [];
 let isProcessing = false;
 
 function initAnimation() {
+
     Reveal.on('fragmentshown', e => enqueueStep(e));
 
     Reveal.on('fragmenthidden', () => {
-        if (Reveal.getCurrentSlide().querySelector("#diagram")) {
-        resetDiagram();
+        const slide = Reveal.getCurrentSlide();
+
+        if (
+            slide.querySelector("#diagram") ||
+            slide.querySelector("#signed-letter")
+        ) {
+            resetDiagram();
         }
     });
 
     Reveal.on('slidechanged', e => {
-        if (e.currentSlide.querySelector("#diagram")) {
-        resetDiagram();
+        if (
+            e.currentSlide.querySelector("#diagram") ||
+            e.currentSlide.querySelector("#signed-letter")
+        ) {
+            resetDiagram();
         }
     });
 }
@@ -41,16 +43,36 @@ async function processQueue() {
 }
 
 function resetDiagram() {
+
+    // ---- OLD DIAGRAM ----
     const coin = document.getElementById("coin");
     const anon = document.getElementById("anon-coin");
 
-    if (!coin || !anon) return;
+    // ---- BLINDSIG ----
+    const envelope = document.getElementById("signed-letter");
+    const cert = document.getElementById("signed-cert");
+    const sigBlind = document.getElementById("sig-on-blinded");
+    const sigFinal = document.getElementById("bank-sig-final");
+    const pen = document.getElementById("pen");
 
     gsap.killTweensOf("*");
-    gsap.set([coin, anon], { x: 0, y: 0 });
-    gsap.set(coin, { opacity: 1 });
-    gsap.set(anon, { opacity: 0 });
-    gsap.set("#wallet-overlay", { opacity: 0 });
+
+    // reset old diagram
+    if (coin && anon) {
+        gsap.set([coin, anon], { x: 0, y: 0 });
+        gsap.set(coin, { opacity: 1 });
+        gsap.set(anon, { opacity: 0 });
+        gsap.set("#wallet-overlay", { opacity: 0 });
+    }
+
+    // reset blind signature
+    if (envelope) {
+        gsap.set(envelope, { x: 0, y: 0 });
+        gsap.set(cert, { opacity: 1 });
+        gsap.set(sigBlind, { opacity: 0 });
+        gsap.set(sigFinal, { opacity: 0 });
+        gsap.set(pen, { opacity: 0 });
+    }
 
     stepQueue.length = 0;
     isProcessing = false;
@@ -60,37 +82,114 @@ function resetDiagram() {
 }
 
 async function handleStep(event) {
+
     const step = event.fragment.dataset.step;
-    const coin = document.getElementById("coin");
-    const anon = document.getElementById("anon-coin");
+    const slide = event.fragment.closest("section");
 
-    switch (step) {
-        case "wire-money1":
-        await move(coin, "Reserve");
-        break;
+    // =========================================================
+    // ✅ OLD DIAGRAM (UNCHANGED)
+    // =========================================================
+    if (slide.querySelector("#diagram")) {
 
-        case "withdraw":
-        showWallet();
-        await move(anon, "exchange", 0);
-        await move(coin, "exchange");
-        await crossfade(coin, anon);
-        await move(anon, "wallet-group");
-        break;
+        const coin = document.getElementById("coin");
+        const anon = document.getElementById("anon-coin");
 
-        case "pay":
-        await move(anon, "merchant");
-        break;
+        switch (step) {
 
-        case "deposit":
-        await move(anon, "exchange");
-        break;
+            case "wire-money1":
+                await move(coin, "Reserve");
+                return;
 
-        case "wire-money2":
-        await crossfade(anon, coin);
-        await move(coin, "bankm");
-        break;
+            case "withdraw":
+                showWallet();
+                await move(anon, "exchange", 0);
+                await move(coin, "exchange");
+                await crossfade(coin, anon);
+                await move(anon, "wallet-group");
+                return;
+
+            case "pay":
+                await move(anon, "merchant");
+                return;
+
+            case "deposit":
+                await move(anon, "exchange");
+                return;
+
+            case "wire-money2":
+                await crossfade(anon, coin);
+                await move(coin, "bankm");
+                return;
+        }
+    }
+
+    // =========================================================
+    // ✅ BLIND SIGNATURE FLOW (NEW)
+    // =========================================================
+    if (slide.querySelector("#signed-letter")) {
+
+        const envelope = document.getElementById("signed-letter");
+        const cert = document.getElementById("signed-cert");
+        const sigBlind = document.getElementById("sig-on-blinded");
+        const sigFinal = document.getElementById("bank-sig-final");
+        const pen = document.getElementById("pen");
+
+        switch (step) {
+
+            // 1️⃣ CERT → BLINDED
+            case "blind":
+                await new Promise(res => {
+                    gsap.timeline({ onComplete: res })
+                        .to(cert, {
+                            scale: 0.7,
+                            opacity: 0,
+                            duration: 0.5
+                        })
+                        .to(envelope, {
+                            scale: 1.05,
+                            duration: 0.3
+                        }, "<")
+                        .to(envelope, {
+                            scale: 1,
+                            duration: 0.2
+                        });
+                });
+                return;
+
+            // 2️⃣ SEND TO BANK
+            case "send":
+                await move(envelope, "bank");
+                return;
+
+            // 3️⃣ SIGN
+            case "sign":
+                gsap.set(pen, { opacity: 1 });
+
+                await new Promise(res => {
+                    gsap.to(sigBlind, {
+                        opacity: 1,
+                        duration: 0.6,
+                        onComplete: res
+                    });
+                });
+                return;
+
+            // 4️⃣ RETURN
+            case "return":
+                await move(envelope, "customer");
+                return;
+
+            // 5️⃣ OPEN ENVELOPE
+            case "open":
+                await crossfade(sigBlind, sigFinal);
+                return;
+        }
     }
 }
+
+// =========================================================
+// ✅ SHARED HELPERS (UNCHANGED)
+// =========================================================
 
 function getCenter(el) {
     const b = el.getBBox();
@@ -106,20 +205,20 @@ function move(el, targetId, duration = 0.8) {
         const c2 = getCenter(t);
 
         gsap.to(el, {
-        duration,
-        x: c2.x - c1.x,
-        y: c2.y - c1.y,
-        ease: "power2.inOut",
-        onComplete: res
+            duration,
+            x: c2.x - c1.x,
+            y: c2.y - c1.y,
+            ease: "power2.inOut",
+            onComplete: res
         });
     });
 }
 
-function crossfade(a, b, duration = 1.5) {
+function crossfade(a, b, duration = 1.2) {
     return new Promise(res => {
         gsap.timeline({ onComplete: res })
-        .to(a, { opacity: 0, duration }, 0)
-        .to(b, { opacity: 1, duration }, 0);
+            .to(a, { opacity: 0, duration }, 0)
+            .to(b, { opacity: 1, duration }, 0);
     });
 }
 
