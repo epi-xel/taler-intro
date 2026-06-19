@@ -18,7 +18,10 @@ svgs = ['bs',
         'streaming',
         'blind-sig1',
         'blind-sig2',
-        'blind-sig3'
+        'blind-sig3',
+        'withdraw1',
+        'withdraw2',
+        'withdraw3'
         ]
 
 svgs.forEach(s => {

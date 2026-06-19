@@ -242,13 +242,31 @@
 							<div id="coin-struc" style="flex:1; width:100%; margin-top: 60pt;"></div>
 						</div>
 					</section>
-					<section data-background="white">
+					<!--<section data-background="white">
 						<div class="v-stack">
 							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 								Blind Signatures (Taler)
 							</h3>
 							<div id="bs-taler" style="flex:1; width:100%; margin-top: 60pt;"></div>
 						</div>
+					</section>-->
+					<section data-background="white" data-auto-animate>
+						<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
+							Withdrawing coins
+						</h3>
+						<div id="withdraw1" data-id="withdraw" style="flex:1; width:100%; margin-top: 60pt;"></div>
+					</section>
+					<section data-background="white" data-auto-animate>
+						<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
+							Withdrawing coins
+						</h3>
+						<div id="withdraw2" data-id="withdraw" style="flex:1; width:100%; margin-top: 60pt;"></div>
+					</section>
+					<section data-background="white" data-auto-animate>
+						<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
+							Withdrawing coins
+						</h3>
+						<div id="withdraw3" data-id="withdraw" style="flex:1; width:100%; margin-top: 60pt;"></div>
 					</section>
 				</section>
 				<!-- Payment and change -->
@@ -392,9 +410,27 @@
 						<h3 style="margin-bottom:10pt; color:#0042b3; font-weight: bold;">
 						How?
 						</h3>
-						<h2 data-id="refresh-prot-text" class="fragment fade-up" style="margin-bottom:-10pt; font-weight: bold;">
+						<h2 data-id="refresh-prot-text" class="fragment fade-up" style="font-weight: bold;">
 						Refresh protocol
 						</h2>
+					</section>
+					<section data-background="white" data-transition="slide" data-auto-animate>
+						<div class="v-stack">
+							<h2 data-id="refresh-prot-text" style="margin:0; color:#0042b3; font-weight: bold;">
+								Refresh protocol
+							</h2>
+							<img src="assets/diagram.svg" style="height: 100%; background: transparent"/>
+						</div>
+					</section>
+					<section data-background="white" data-transition="slide">
+						<div class="v-stack">
+							<h3 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
+								Re-obtaining a refreshed coin
+							</h3>
+							<div style="width:100%; display:flex; justify-content:center;">
+								<div id="reobtain-coin" style="width:100%;"></div>
+							</div>
+						</div>
 					</section>
 				<!-- Refresh protocol use cases -->
 					<section data-background="white" data-transition="slide">
@@ -585,31 +621,51 @@
 					</section>
 				</section> -->
 				<!-- Final -->
-				<section data-background="white">
+				<section data-background-image="assets/paper.jpg">
 					<div class="v-stack">
+						<img src="assets/quantum.png" style="height: 300px; background: transparent; margin-bottom: -50px;"/>
 						<h2 style="color:#0042b3; font-weight: bold;">
 							Post-quantum?
 						</h2>
 						<h3 style="font-weight: bold;">
 							We are working on it
 						</h3>
+						<h4 class="fragment fade-up" style="margin: 30pt; font-weight: normal;">
+							The refresh protocol exploits underlying properties available only in classic crypto
+						</h4>
+						<h4 class="fragment fade-up box" style="font-weight: normal;">
+							We had to change the protocol completely
+						</h4>
 					</div>
 				</section>
 				<section data-background="white">
 					<div class="v-stack">
 						<h2 style="color:#0042b3; font-weight: bold;">
-							Thanks for the attention!
+							The End
 						</h2>
 					</div>
-				</section>
-				<section data-background="white">
-					<div class="v-stack">
-						<h2>
-							<a href="https://www.taler.net/en/index.html" style="margin: 40pt;font-weight: bold;">
-								More about Taler?
-							</a>
-						</h2>
-						<img src="assets/qrcode.svg" style="height: 400px; background: transparent"/>
+					<div style="display:flex; align-items:center;">
+						<div class="v-stack">
+							<img src="assets/diagram.svg" style="height: 400px; background: transparent; margin-bottom:-30px; margin-top: 0px"/>
+							<div style="display:flex; align-items:center;">
+								<img src="assets/coin-struc.svg" style="height: 180px; background: transparent;"/>
+								<img src="assets/cheat2.svg" style="height: 200px; background: transparent; margin-left:20px"/>
+							</div>
+						</div>
+						<div class="v-stack">
+							<h5 style="font-size: 18pt;">
+								<a href="https://www.taler.net/en/index.html">
+									More about Taler?
+								</a>
+							</h5>
+							<img src="assets/qrcode.svg" style="height: 200px; background: transparent;  margin-top: -20px;"/>
+							<h5 style="font-size: 18pt;">
+								<a href="https://www.taler.net/en/index.html">
+									More on the crypto </br> behind the refresh?
+								</a>
+							</h5>
+							<img src="assets/qrcode.svg" style="height: 200px; background: transparent;  margin-top: -20px;"/>
+						</div>
 					</div>
 				</section>
 			</div>
