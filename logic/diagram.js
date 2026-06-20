@@ -65,30 +65,34 @@ async function handleStep(event) {
     const anon = document.getElementById("anon-coin");
 
     switch (step) {
+
+        case "wallet":
+            showWallet();
+            break;
+
         case "wire-money1":
-        await move(coin, "Reserve");
-        break;
+            await move(coin, "Reserve");
+            break;
 
         case "withdraw":
-        showWallet();
-        await move(anon, "exchange", 0);
-        await move(coin, "exchange");
-        await crossfade(coin, anon);
-        await move(anon, "wallet-group");
-        break;
+            await move(anon, "exchange", 0);
+            await move(coin, "exchange");
+            await crossfade(coin, anon);
+            await move(anon, "wallet-group");
+            break;
 
         case "pay":
-        await move(anon, "merchant");
-        break;
+            await move(anon, "merchant");
+            break;
 
         case "deposit":
-        await move(anon, "exchange");
-        break;
+            await move(anon, "exchange");
+            break;
 
         case "wire-money2":
-        await crossfade(anon, coin);
-        await move(coin, "bankm");
-        break;
+            await crossfade(anon, coin);
+            await move(coin, "bankm");
+            break;
     }
 }
 
@@ -124,5 +128,5 @@ function crossfade(a, b, duration = 1.5) {
 }
 
 function showWallet() {
-    gsap.set("#wallet-overlay", { opacity: 1 });
+    gsap.set("#wallet-overlay", { opacity: 1});
 }

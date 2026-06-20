@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 689.6 579.89">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 600">
   <defs>
     <style>
       .ml-cls-1 {
@@ -434,7 +434,23 @@
           <path class="ml-cls-8" d="M23.07,420.92c0-5.95,8.4-5.95,12.6-9.91,2.1-1.98-4.2-1.98-4.2-11.89,0-6.61,2.8-9.91,8.4-9.91s8.4,3.3,8.4,9.91c0,9.91-6.3,9.91-4.2,11.89,4.2,3.96,12.6,3.96,12.6,9.91"/>
         </g>
       </g>
-      <g id="cheat-3" class="fragment fade">
+      <g id="cheat-3">
+        <g data-id="change">
+          <g>
+            <g>
+              <line class="ml-cls-5" x1="347.51" y1="397.85" x2="223.94" y2="397.85"/>
+              <path class="ml-cls-23" d="M333.84,388.25c-.3.46-.16,1.08.31,1.38l12.91,8.22-12.91,8.22c-.47.3-.6.92-.31,1.38.3.47.92.6,1.38.31l14.23-9.06c.29-.18.46-.5.46-.84s-.17-.66-.46-.84l-14.23-9.06c-.17-.11-.35-.16-.54-.16-.33,0-.65.16-.84.46Z"/>
+            </g>
+            <text class="ml-cls-19" transform="translate(241.2 387.38)"><tspan x="0" y="0">Cha</tspan><tspan class="ml-cls-10" x="43.69" y="0">n</tspan><tspan class="ml-cls-42" x="58.63" y="0">ge</tspan></text>
+          </g>
+          <g>
+            <g class="ml-cls-29">
+              <ellipse class="ml-cls-21" cx="284.71" cy="311.74" rx="46.65" ry="47.23"/>
+            </g>
+            <text class="ml-cls-18" transform="translate(275.77 345.31) scale(.99 1)"><tspan x="0" y="0">B</tspan></text>
+            <path class="ml-cls-8" d="M261.12,326.3c0-8.41,11.8-8.41,17.69-14.02,2.95-2.8-5.9-2.8-5.9-16.82,0-9.35,3.93-14.02,11.8-14.02s11.8,4.67,11.8,14.02c0,14.02-8.85,14.02-5.9,16.82,5.9,5.61,17.69,5.61,17.69,14.02"/>
+          </g>  
+        </g>
         <g data-id="change1">
           <g class="ml-cls-41">
             <ellipse class="ml-cls-39" cx="416.06" cy="426.84" rx="43.46" ry="43.63"/>
@@ -445,22 +461,6 @@
             <path class="ml-cls-21" d="M437.79,410.69v5.56h-10.72v5.91c1.34-1.59,3.07-2.38,5.18-2.38,2.38,0,4.18.67,5.4,2.01s1.83,3.91,1.83,7.72v4.96c0,2.46-.12,4.27-.35,5.43s-.74,2.22-1.51,3.2c-.77.98-1.84,1.73-3.22,2.26-1.38.52-3.06.78-5.04.78-2.23,0-4.19-.39-5.88-1.17-1.7-.78-2.9-1.95-3.62-3.49-.71-1.55-1.07-3.94-1.07-7.18v-1.89h8.65v2.17c0,2.25.08,3.85.24,4.79s.7,1.42,1.63,1.42c.43,0,.77-.13,1.04-.41.26-.27.41-.56.43-.88.02-.31.05-1.68.07-4.1v-6.9c0-1.3-.14-2.19-.41-2.66-.27-.47-.72-.71-1.35-.71-.4,0-.73.12-1.01.37-.27.24-.45.51-.52.79-.08.28-.12.93-.12,1.94h-8.56l.36-17.53h18.55Z"/>
           </g>
         </g>
-        <g data-id="change">
-          <g transform="translate(0, 30)">
-            <g>
-              <line class="ml-cls-5" x1="347.51" y1="397.85" x2="223.94" y2="397.85"/>
-              <path class="ml-cls-23" d="M333.84,388.25c-.3.46-.16,1.08.31,1.38l12.91,8.22-12.91,8.22c-.47.3-.6.92-.31,1.38.3.47.92.6,1.38.31l14.23-9.06c.29-.18.46-.5.46-.84s-.17-.66-.46-.84l-14.23-9.06c-.17-.11-.35-.16-.54-.16-.33,0-.65.16-.84.46Z"/>
-            </g>
-            <text class="ml-cls-19" transform="translate(241.2 387.38)"><tspan x="0" y="0">Cha</tspan><tspan class="ml-cls-10" x="43.69" y="0">n</tspan><tspan class="ml-cls-42" x="58.63" y="0">ge</tspan></text>
-          </g>
-          <g transform="translate(0, 30)">
-            <g class="ml-cls-29">
-              <ellipse class="ml-cls-21" cx="284.71" cy="311.74" rx="46.65" ry="47.23"/>
-            </g>
-            <text class="ml-cls-18" transform="translate(275.77 345.31) scale(.99 1)"><tspan x="0" y="0">B</tspan></text>
-            <path class="ml-cls-8" d="M261.12,326.3c0-8.41,11.8-8.41,17.69-14.02,2.95-2.8-5.9-2.8-5.9-16.82,0-9.35,3.93-14.02,11.8-14.02s11.8,4.67,11.8,14.02c0,14.02-8.85,14.02-5.9,16.82,5.9,5.61,17.69,5.61,17.69,14.02"/>
-          </g>
-        </g>
         <g data-id="change2">
           <g class="ml-cls-9">
             <ellipse class="ml-cls-21" cx="450.51" cy="377.24" rx="33.23" ry="33.39"/>
@@ -469,12 +469,28 @@
           <path class="ml-cls-8" d="M433.71,387.53c0-5.95,8.4-5.95,12.6-9.91,2.1-1.98-4.2-1.98-4.2-11.89,0-6.61,2.8-9.91,8.4-9.91s8.4,3.3,8.4,9.91c0,9.91-6.3,9.91-4.2,11.89,4.2,3.96,12.6,3.96,12.6,9.91"/>
         </g>
       </g>
-      <g id="trans-own" class="fragment fade-in-then-out">
-        <g class="ml-cls-1">
-          <rect class="ml-cls-21" x="541.19" y="374.15" width="133.87" height="76.86" rx="14.59" ry="14.59"/>
-          <rect class="ml-cls-7" x="541.19" y="374.15" width="133.87" height="76.86" rx="14.59" ry="14.59"/>
+      <g id="link">
+        <g>
+          <g>
+            <line class="ml-cls-5" x1="345.29" y1="430.8" x2="221.72" y2="430.8"/>
+            <path class="ml-cls-23" d="M331.62,421.2c-.3.46-.16,1.08.31,1.38l12.91,8.22-12.91,8.22c-.47.3-.6.92-.31,1.38s.92.6,1.38.31l14.23-9.06c.29-.18.46-.5.46-.84s-.17-.66-.46-.84l-14.23-9.06c-.17-.11-.35-.16-.54-.16-.33,0-.65.16-.84.46Z"/>
+          </g>
+          <text class="ml-cls-24" transform="translate(229.57 464.07)"><tspan x="0" y="0">R</tspan><tspan class="ml-cls-40" x="16.17" y="0">e-</tspan><tspan x="38.98" y="0">obtain</tspan></text>
         </g>
-        <text class="ml-cls-22" transform="translate(545.29 408.83)"><tspan class="ml-cls-32" x="0" y="0">T</tspan><tspan class="ml-cls-38" x="12.73" y="0">r</tspan><tspan x="21.63" y="0">ans</tspan><tspan class="ml-cls-38" x="60.25" y="0">f</tspan><tspan x="68.23" y="0">e</tspan><tspan class="ml-cls-43" x="81.48" y="0">r</tspan><tspan class="ml-cls-36" x="90.45" y="0">r</tspan><tspan x="99.31" y="0">ed</tspan><tspan class="ml-cls-11" x="2.27" y="25.2">o</tspan><tspan x="15.71" y="25.2">w</tspan><tspan class="ml-cls-30" x="35.39" y="25.2">n</tspan><tspan x="50.02" y="25.2">e</tspan><tspan class="ml-cls-31" x="63.27" y="25.2">r</tspan><tspan x="72.28" y="25.2">ship!</tspan></text>
+        <g>
+          <g class="ml-cls-3">
+            <ellipse class="ml-cls-21" cx="483.74" cy="417.05" rx="33.58" ry="33.84"/>
+          </g>
+          <text class="ml-cls-13" transform="translate(477.62 441.1)"><tspan x="0" y="0">A</tspan></text>
+          <path class="ml-cls-8" d="M466.76,427.48c0-6.03,8.49-6.03,12.74-10.04,2.12-2.01-4.25-2.01-4.25-12.05,0-6.7,2.83-10.04,8.49-10.04s8.49,3.35,8.49,10.04c0,10.04-6.37,10.04-4.25,12.05,4.25,4.02,12.74,4.02,12.74,10.04"/>
+        </g>
+        <g>
+          <g class="ml-cls-2">
+            <ellipse class="ml-cls-21" cx="286.93" cy="523.01" rx="46.65" ry="47.6"/>
+          </g>
+          <text class="ml-cls-14" transform="translate(278.43 556.84) scale(.98 1)"><tspan x="0" y="0">A</tspan></text>
+          <path class="ml-cls-8" d="M263.34,537.68c0-8.48,11.8-8.48,17.69-14.13,2.95-2.83-5.9-2.83-5.9-16.96,0-9.42,3.93-14.13,11.8-14.13s11.8,4.71,11.8,14.13c0,14.13-8.85,14.13-5.9,16.96,5.9,5.65,17.69,5.65,17.69,14.13"/>
+        </g>
       </g>
     </g>
   </g>

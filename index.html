@@ -23,15 +23,20 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-gradient="linear-gradient(to left, #0042b3, #222)" data-id="mainbg" data-transition="slide" data-background-transition="zoom">				
-					<img src="assets/taler-logo.svg" style="width: 70%; margin: 10px 0 30px 0; background: transparent"/>
-					<div style="display:flex; align-items:center;">
-						<h3 style="color:white; margin: 10px 10px 0 0; text-align: right;">
+				<section data-background-gradient="linear-gradient(to left, #0042b3, #222)" data-id="mainbg" data-transition="slide">				
+					<div style="display:flex; align-items:center; justify-content:center; width: 100%;">
+						<img src="assets/taler-logo.svg" style="width: 80%;  background: transparent"/>
+					</div>
+					<div style="display:flex; align-items:center; justify-content:center; gap: 10px; margin-top: -30pt;">
+						<h3 style="color:white; margin: 0; text-align: right; max-width: 600px;">
 							The ethical privacy-preserving digital payment system
 						</h3>
-						<img src="assets/slides-code.svg" style="height:200px;">
+						<div class="v-stack" style="margin-top: -40pt;">
+							<h4 style="color:white; margin: 0; font-weight:normal; font-size: 22pt; margin-bottom: -20pt;"> Slides @ </br> e.pioldi.net/ </br> taler-intro</h4>
+							<img src="assets/slides-code.svg" style="height:220px;">
+						</div>
 					</div>
-					<h6 style="font-size: 24pt; color: white;">Slides: e.pioldi.net/taler-presentation</h6>
+					<h6 style="font-size: 24pt; color: white;">Elisa Pioldi - Security in Times of Surveillance</h6>
 				</section>
 				<!-- Why Taler -->
 				<section> 
@@ -42,16 +47,21 @@
 					</section>
 					<section data-background="assets/creditcard.jpg" data-transition="slide">
 					</section>
-					<section data-background="assets/creditcard-overlay.png" data-transition="fade">
-						<h2 class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
-							Traceability
-						</h2>
-						<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
-							Profiling
-						</h2>
-						<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
-							Sensitive data exposure
-						</h2>
+					<section data-background="assets/creditcard.jpg" data-transition="fade">
+						<div class="r-stack">
+							<div style="position: absolute; top: 0; left: 0; background-color: white; width: 100%; height: 100%; opacity: 0.8;"></div>
+							<div class="v-stack">
+								<h2 class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
+									Traceability
+								</h2>
+								<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
+									Profiling
+								</h2>
+								<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
+									Sensitive data exposure
+								</h2>
+							</div>
+						</div>
 					</section>
 					<section data-background="assets/creditcard-overlay.png" data-transition="slide" data-auto-animate>
 						<img data-id="bitcoin"						
@@ -92,7 +102,7 @@
 							We live in a real world
 						</h2>
 						<h2  class="fragment fade-down" style="margin: 30pt; color:white; font-weight: bold;">
-							...and real world has rules 
+							...and real world has rules
 						</h2>
 					</section>
 				</section>
@@ -198,24 +208,16 @@
 						</h2>
 					</section>
 					<section data-background="white" data-transition="slide">
-						<div id="diagram"></div>
+						<div id="diagram" style="width: 100%; height: 100%;"></div>
 					</section>
 				</section>
 				<!-- Cryptographic building blocks -->
 				<section>
 					<section data-background-iframe="assets/section.html" data-transition="slide">
-						<h3 style="margin:0; color:white; font-weight: bold;">
+						<h2 style="margin:0; color:white; font-weight: bold;">
 							A bit of cryptography
-						</h3>
+						</h2>
 					</section>
-					<!-- <section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								Blind Signatures (e-cash)
-							</h3>
-							<div id="bs" style="flex:1; width:100%; margin-top: 60pt;"></div>
-						</div>
-					</section> -->
 					<section data-background="white" data-auto-animate>
 						<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 							Blind Signatures (e-cash)
@@ -242,14 +244,6 @@
 							<div id="coin-struc" style="flex:1; width:100%; margin-top: 60pt;"></div>
 						</div>
 					</section>
-					<!--<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								Blind Signatures (Taler)
-							</h3>
-							<div id="bs-taler" style="flex:1; width:100%; margin-top: 60pt;"></div>
-						</div>
-					</section>-->
 					<section data-background="white" data-auto-animate>
 						<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 							Withdrawing coins
@@ -321,7 +315,7 @@
 							</h3>
 							<div class="r-stack">
 								<div data-id="bg-cheat" style="width: 430pt; height: 170pt; background-color: #0042b341; margin-left: 130pt; margin-top:5pt; border-radius: 30pt;"></div>
-								<div id="cheat0" style="z-index: 1; margin-left: 150pt; width: 500pt"></div>
+								<div id="cheat1" style="z-index: 1; margin-left: 150pt; width: 500pt"></div>
 							</div>
 						</div>
 					</section>
@@ -337,7 +331,7 @@
 							</h3>
 							<div class="r-stack">
 								<div data-id="bg-cheat" style="width: 430pt; height: 400pt; background-color: #0042b341; margin-top:0pt; margin-left: 130pt; border-radius: 30pt;"></div>
-								<div id="cheat1" style="z-index: 1; margin-left: 150pt; width: 500pt"></div>
+								<div id="cheat2" style="z-index: 1; margin-left: 150pt; width: 500pt"></div>
 							</div>
 						</div>
 					</section>
@@ -353,7 +347,7 @@
 							</h3>
 							<div class="r-stack">
 								<div data-id="bg-cheat" style="width: 430pt; height: 430pt; background-color: #0042b341; margin-left: 130pt; margin-bottom:10pt; border-radius: 30pt;"></div>
-								<div id="cheat2" style="z-index: 1; margin-left: 150pt; width: 500pt"></div>
+								<div id="cheat3" style="z-index: 1; margin-left: 150pt; width: 500pt"></div>
 							</div>
 						</div>
 					</section>
@@ -440,233 +434,70 @@
 						<div data-id="streaming" class="fragment fade" data-fragment-index="0" id="streaming" style="flex:1; height:100%; margin-top: 10pt;"></div>
 					</section>
 				</section>
-				<!-- Refresh protocol -->
-				<!-- <section>
-					<section data-background-iframe="assets/section.html" data-auto-animate>
-						<h2 data-id="refresh-prot-text" style="color:white; font-weight: bold;">
-							Refresh protocol
-						</h2>
-					</section>
-					<section data-background="white" data-auto-animate>
-						<div class="v-stack">
-							<h2 data-id="refresh-prot-text" style="color:#0042b3; font-weight: bold; font-size: 42pt">
-								Refresh protocol
-							</h2>
-							<div id="refresh-prot" style="flex:1; width:100%; margin-top: 20pt;"></div>
-							<h4 class="fragment fade" style="margin-top:10pt; font-weight: normal;">
-								Cut-and-choose
-							</h4>
-						</div>
-					</section>
-					<section data-background="white" data-transition="slide" data-auto-animate>
-						<div class="v-stack">
-							<h3 data-id="refresh-der" style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								Refresh Derive
-							</h3>
-							<div style="width:100%; display:flex; justify-content:center;">
-								<div id="refresh-derive" style="width:70%;"></div>
-							</div>
-						</div>
-					</section>
-					<section data-background="white" data-auto-animate>
-						<div class="v-stack">
-							<h3 data-id="refresh-der" style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								Refresh Derive
-							</h3>
-							<h4 style="margin: 30pt; font-weight: normal;">
-								With <strong>cut-and-choose</strong> the Exchange makes sure that planchets are generated in this exact way
-							</h4>
-							<div class="fragment fade">
-								<h4 style="margin-top: 30pt; font-weight: normal;">
-									With an open commitment the Customer reveals 
-								</h4>
-								<div style="width:100%; display:flex; justify-content:center;">
-									<div id="reveal-ex" style="width:20%;"></div>
-								</div>
-								<h4 style="font-weight: normal;">
-									to the Exchange
-								</h4>
-							</div>
-						</div>
-					</section>
-					<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
-								Re-obtaining a refreshed coin
-							</h3>
-							<div style="width:100%; display:flex; justify-content:center;">
-								<div id="reobtain-coin" style="width:100%;"></div>
-							</div>
-						</div>
-					</section>
-				</section> -->
-				<!-- PQ Refresh protocol -->
-				<!-- <section>
-					<section data-background-iframe="assets/section.html" data-transition="slide">
-						<h2 style="margin:0; color:white; font-weight: bold;">
-							Post-quantum refresh
-						</h2>
-					</section>
-					<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								What's the current problem?
-							</h3>
-							<h4 class="fragment fade-up" style="margin: 30pt; font-weight: normal;">
-								Refresh protocol exploits ability of <strong>Ed25519</strong> keys to do <strong>Curve25519 ECDH</strong>
-							</h4>
-							<h4 class="fragment fade-up box" style="background:#0042b341; margin-left: 150pt; margin-right: 150pt; font-weight: normal;">
-								Not available in PQ
-							</h4>
-							<h4 class="fragment fade-up" style="margin: 30pt; font-weight: normal;">
-								... But we need to keep <strong>signatures</strong>
-							</h4>
-						</div>
-					</section>
-					<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								The idea
-							</h3>
-							<div style="width:100%; display:flex; justify-content:center;">
-								<div class="r-stack fragment fade" style="width:100%;">
-									<div id="pq-idea" style="width:100%;"></div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-								Is this all..?
-							</h3>
-							<p class="fragment fade-up" style="background-color: #0042b341; padding: 10pt; border-radius: 20pt; font-weight: normal; font-size: 24pt;">The coin owner must be always able to generate this signature</p>
-							<div style="width:100%; display:flex; justify-content:center;">
-								<div id="rand" style="width:100%;"></div>
-							</div>
-						</div>
-					</section>
-					<section data-background="white" data-auto-animate>
-						<div class="v-stack">
-							<h3 style="display: flex; align-items: center; justify-content: center;">
-								<div data-id="tus" style="color:#0042b3; font-weight: bold;  white-space: nowrap;">
-									t-unique signatures
-								</div>
-							</h3>
-							<p class="fragment fade-up" style="background-color: #0042b341; padding: 10pt; border-radius: 20pt; font-weight: normal; font-size: 24pt;">
-								The set of possible valid signatures for a fixed message-pk pair is bound by some constant t</p>
-							<div style="width:100%; display:flex; justify-content:center;">
-								<div id="tsig" style="width:80%;"></div>
-							</div>
-						</div>
-					</section>
-					<section data-background="white" data-auto-animate>
-						<div class="v-stack">
-							<h3 style="display: flex; align-items: center; justify-content: center; margin-bottom: 20pt;">
-								<div style="color:#0042b3; font-weight: bold; font-size: 36pt;">
-									Post-quantum &nbsp;
-								</div>
-								<div data-id="tus" style="color:#0042b3; font-weight: bold; font-size: 36pt;  white-space: nowrap;">
-									t-unique signatures
-								</div>
-								<div style="color:#0042b3; font-weight: bold; font-size: 36pt;">
-									?
-								</div>
-							</h3>
-						</div>
-						<a class="fragment fade" href="https://eprint.iacr.org/2011/484" style="font-weight: bold;">
-							XMSS!
-						</a>
-						<img class="fragment fade" src="assets/xmss.png" style="height: 100%; background: transparent"/>
-					</section>
-					<section data-background="white">
-						<div class="v-stack">
-							<h3 style="margin: 30pt; font-weight: normal;">
-								The owner of the coin can <strong>always</strong> produce <strong>all signatures</strong> on the public message
-							</h3>
-						</div>
-					</section>
-					<section data-background="white" data-transition="slide">
-						<div class="v-stack">
-							<h3 style="margin: 40pt; color:#0042b3; font-weight: bold;">
-								New Refresh Derive
-							</h3>
-							<div style="width:100%; display:flex; justify-content:center;">
-								<div id="new-rd" style="width:80%;"></div>
-							</div>
-						</div>
-					</section>
-					<section data-background="white" data-transition="slide">
-						<div class="v-stack">
-							<h3 style="margin: 40pt; color:#0042b3; font-weight: bold;">
-								And in cut-and-choose?
-							</h3>
-							<h4 style="margin: 20pt; font-weight: bold;">
-								How does the Exchange verify the open commitments?
-							</h4>
-							<h4 class="fragment fade" style="font-weight: normal;">
-								Customer <strong style="color:#0042b3;">reveals</strong> the signatures
-							</h4>
-							<h4 class="fragment fade" style="font-weight: normal;">
-								Exchange <strong style="color:#0042b3;">verifies</strong>  the signatures
-							</h4>
-						</div>
-					</section>
-					<section data-background="white" data-transition="slide">
-						<div class="v-stack">
-							<h3 style="font-weight: normal;">
-								The new protocol uses <strong>signatures</strong> as <strong>private information</strong>!
-							</h3>
-						</div>
-					</section>
-				</section> -->
 				<!-- Final -->
-				<section data-background-image="assets/paper.jpg">
-					<div class="v-stack">
-						<img src="assets/quantum.png" style="height: 300px; background: transparent; margin-bottom: -50px;"/>
-						<h2 style="color:#0042b3; font-weight: bold;">
-							Post-quantum?
-						</h2>
-						<h3 style="font-weight: bold;">
-							We are working on it
-						</h3>
-						<h4 class="fragment fade-up" style="margin: 30pt; font-weight: normal;">
-							The refresh protocol exploits underlying properties available only in classic crypto
-						</h4>
-						<h4 class="fragment fade-up box" style="font-weight: normal;">
-							We had to change the protocol completely
-						</h4>
-					</div>
-				</section>
-				<section data-background="white">
-					<div class="v-stack">
-						<h2 style="color:#0042b3; font-weight: bold;">
-							The End
-						</h2>
-					</div>
-					<div style="display:flex; align-items:center;">
+				<section>
+					<section data-background-image="assets/paper.jpg">
 						<div class="v-stack">
-							<img src="assets/diagram.svg" style="height: 400px; background: transparent; margin-bottom:-30px; margin-top: 0px"/>
-							<div style="display:flex; align-items:center;">
-								<img src="assets/coin-struc.svg" style="height: 180px; background: transparent;"/>
-								<img src="assets/cheat2.svg" style="height: 200px; background: transparent; margin-left:20px"/>
+							<h2 style="font-weight: bold;">
+								WIP
+							</h2>
+							<img src="assets/quantum.png" style="height: 300px; background: transparent; margin-bottom: -50px; margin-top: -20pt; margin-left: -40pt;"/>
+							<h3 class="fragment fade-up" style="font-weight: bold;">
+								Post-quantum
+							</h4>
+							<h4 class="fragment fade-up" style="font-weight: normal;">
+								The refresh exploits specific properties available only in classic crypto
+							</h4>
+							<h4 class="fragment fade-up box" style="font-weight: normal;">
+								The refresh protocol had be changed
+							</h4>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section data-background="white" data-auto-animate>
+						<div class="v-stack">
+							<h2 data-id="end" style="color:#0042b3; font-weight: bold;">
+								The End
+							</h2>
+						</div>
+					</section>
+					<section data-background="white"  data-auto-animate>
+						<div class="v-stack">
+							<h2 data-id="end" style="color:#0042b3; font-weight: bold;">
+								The End
+							</h2>
+						</div>
+						<div style="display:flex; align-items:flex-start; gap: 10px;">
+							<div class="v-stack">
+								<div style="border: 2px solid #0042b3; margin-bottom: 10px; height: 400px; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+									<img src="assets/diagram-recap.svg" style="height: 100%; width: 100%; object-fit: contain; background: transparent;"/>
+								</div>
+								<div style="display:flex; align-items:center; gap: 10px;">
+									<div style="border: 2px solid #0042b3; height: 200px; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+										<img src="assets/coin-struc.svg" style="height: 100%; width: 100%; object-fit: contain; background: transparent;"/>
+									</div>
+									<div style="border: 2px solid #0042b3; height: 200px; width: 200px; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+										<img src="assets/cheat-recap.svg" style="height: 100%; width: 100%; object-fit: contain; background: transparent;"/>
+									</div>
+								</div>
+							</div>
+							<div class="v-stack" style="display:flex; flex-direction:column; align-items:center; gap: 10px; margin-top: 20px; width: 220px; flex: 0 0 220px;">
+								<h5 style="font-size: 20pt; margin: 0; line-height: 1.1; text-align: center;">
+									<a href="https://www.taler.net/en/index.html">
+										More about Taler?
+									</a>
+								</h5>
+								<img src="assets/qr-taler.svg" style="height: 200px; background: transparent; margin: 0;"/>
+								<h5 style="font-size: 20pt; margin: 0; line-height: 1.1; text-align: center;"> 
+									<a href="https://e.pioldi.net/taler-presentation/#/6/1">
+										More on the crypto behind the refresh?
+									</a>
+								</h5>
+								<img src="assets/qr-refresh.svg" style="height: 200px; background: transparent; margin: 0;"/>
 							</div>
 						</div>
-						<div class="v-stack">
-							<h5 style="font-size: 18pt;">
-								<a href="https://www.taler.net/en/index.html">
-									More about Taler?
-								</a>
-							</h5>
-							<img src="assets/qrcode.svg" style="height: 200px; background: transparent;  margin-top: -20px;"/>
-							<h5 style="font-size: 18pt;">
-								<a href="https://www.taler.net/en/index.html">
-									More on the crypto </br> behind the refresh?
-								</a>
-							</h5>
-							<img src="assets/qrcode.svg" style="height: 200px; background: transparent;  margin-top: -20px;"/>
-						</div>
-					</div>
+					</section>
 				</section>
 			</div>
 		</div>

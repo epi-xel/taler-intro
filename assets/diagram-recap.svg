@@ -1,4 +1,3 @@
-<div class="r-stack" style="position: relative; width: 100%; height: 100%;">
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1139.43 730.55">
   <defs>
@@ -617,6 +616,3 @@
     </g>
   </g>
 </svg>
-<div class="fragment fade" style="position: absolute; top: 0; left: 0; background-color: white; width: 100%; height: 100%; opacity: 0.8;"></div>
-<h4 class="fragment fade" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0; text-align: center;">Online and centralized</h4>
-</div>
