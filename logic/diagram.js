@@ -1,10 +1,3 @@
-fetch('assets/diagram.svg')
-    .then(r => r.text())
-    .then(svg => {
-        document.getElementById('diagram').innerHTML = svg;
-        initAnimation();
-});
-
 const stepQueue = [];
 let isProcessing = false;
 

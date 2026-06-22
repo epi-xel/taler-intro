@@ -11,7 +11,8 @@ svgs = ['coin-struc',
         'blind-sig3',
         'withdraw1',
         'withdraw2',
-        'withdraw3'
+        'withdraw3',
+        'diagram'
         ]
 
 function loadSVGs() {
@@ -22,6 +23,9 @@ function loadSVGs() {
         const container = document.getElementById(s);
         if (!container) return;
         container.innerHTML = svg;
+        if (s == 'diagram') {
+            initAnimation()
+        }
       })
   );
 
