@@ -18,6 +18,16 @@ svgs.forEach(s => {
     fetch('assets/' + s + '.svg')
     .then(r => r.text())
     .then(svg => {
-        document.getElementById(s).innerHTML = svg;
+        const container = document.getElementById(s);
+        container.innerHTML = svg;
+
+        container.querySelectorAll('svg').forEach(el => {
+            el.style.display = 'block';
+            el.style.setProperty('width', 'auto', 'important');
+            el.style.setProperty('height', '100%', 'important');
+            el.style.setProperty('max-width', '100%', 'important');
+            el.style.setProperty('max-height', '100%', 'important');
+            el.style.setProperty('object-fit', 'contain', 'important');
+        });
     });
 });
