@@ -4,7 +4,7 @@ svgs = ['coin-struc',
         'cheat1',
         'cheat2',
         'cheat3',
-        'reobtain-coin',
+        'reobtain-coin', // cointains HTML, cannot be loaded only as a svg
         'streaming',
         'blind-sig1',
         'blind-sig2',

@@ -43,3 +43,11 @@ $active-color: #0042b3;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 // Change text when the background is inverted
 @include mixins.dark-bg-text-color(#fff);
+
+@font-face {
+	font-family: 'write me a song';
+	src: url('fonts/Please write me a song.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
