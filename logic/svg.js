@@ -48,7 +48,7 @@ function loadSVGs() {
 // Initial load
 loadSVGs();
 
-// Reload and re-sync on orientation change / window resize
+// Reload and re-sync on orientation change / window resize / reload/back-forward restore
 window.addEventListener('orientationchange', () => {
   setTimeout(() => {
     applySVGStyles(document.body);
@@ -61,6 +61,14 @@ window.addEventListener('orientationchange', () => {
 
 window.addEventListener('resize', () => {
   if (window.Reveal) {
+    Reveal.layout();
+    Reveal.sync();
+  }
+});
+
+window.addEventListener('pageshow', event => {
+  if (window.Reveal) {
+    applySVGStyles(document.body);
     Reveal.layout();
     Reveal.sync();
   }
