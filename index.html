@@ -18,6 +18,12 @@
 
 		<!-- GSAP -->
   		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script>
+		// Disable GSAP lag-smoothing to avoid multi-second "lock" after pauses
+		if (window.gsap && gsap.ticker && typeof gsap.ticker.lagSmoothing === 'function') {
+			gsap.ticker.lagSmoothing(0);
+		}
+		</script>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />

@@ -2,7 +2,12 @@ const stepQueue = [];
 let isProcessing = false;
 
 function initAnimation() {
-    Reveal.on('fragmentshown', e => enqueueStep(e));
+    Reveal.on('fragmentshown', e => {
+        // only handle fragments that belong to the diagram container
+        const container = document.getElementById('diagram');
+        if (!e.fragment || !container || !container.contains(e.fragment)) return;
+        enqueueStep(e);
+    });
 
     Reveal.on('fragmenthidden', () => {
         if (Reveal.getCurrentSlide().querySelector("#diagram")) {
@@ -18,6 +23,8 @@ function initAnimation() {
 }
 
 function enqueueStep(event) {
+    // avoid enqueueing the same fragment multiple times
+    if (event && event.fragment && event.fragment.dataset && event.fragment.dataset.processed) return;
     stepQueue.push(event);
     processQueue();
 }
@@ -48,11 +55,24 @@ function resetDiagram() {
     stepQueue.length = 0;
     isProcessing = false;
 
+    // clear processed flags so the animation can run again cleanly
+    const container = document.getElementById('diagram');
+    if (container) {
+        container.querySelectorAll('[data-step]').forEach(el => {
+            if (el.dataset) delete el.dataset.processed;
+        });
+    }
+
     const { h, v } = Reveal.getIndices();
     Reveal.slide(h, v, -1);
 }
 
 async function handleStep(event) {
+    if (!event || !event.fragment) return;
+    // mark as processed to avoid re-processing the same fragment
+    if (event.fragment.dataset && event.fragment.dataset.processed) return;
+    if (event.fragment.dataset) event.fragment.dataset.processed = '1';
+
     const step = event.fragment.dataset.step;
     const coin = document.getElementById("coin");
     const anon = document.getElementById("anon-coin");

@@ -16,18 +16,29 @@ svgs = ['coin-struc',
         ]
 
 function loadSVGs() {
-  const loads = svgs.map(s =>
-    fetch('assets/' + s + '.svg')
+  const loads = svgs.map(s => {
+    const container = document.getElementById(s);
+    if (!container) return Promise.resolve();
+
+    // If we've already loaded this SVG, skip re-fetching to avoid
+    // heavy DOM churn that can cause animation jank when resuming.
+    if (container.innerHTML && container.innerHTML.trim().length > 0) {
+      if (s == 'diagram') {
+        // ensure animation hook is initialized if needed
+        initAnimation();
+      }
+      return Promise.resolve();
+    }
+
+    return fetch('assets/' + s + '.svg')
       .then(r => r.text())
       .then(svg => {
-        const container = document.getElementById(s);
-        if (!container) return;
         container.innerHTML = svg;
         if (s == 'diagram') {
-            initAnimation()
+            initAnimation();
         }
-      })
-  );
+      });
+  });
 
   Promise.all(loads).then(() => {
     if (window.Reveal) {
