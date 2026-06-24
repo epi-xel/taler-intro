@@ -41,10 +41,10 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-id="slides">
 				<section data-background-gradient="linear-gradient(to left, #0042b3, #222)" data-id="mainbg" data-transition="slide">				
 					<div style="display:flex; align-items:center; justify-content:center; width: 100%;">
-						<img src="assets/taler-logo.svg" style="width: 80%;  background: transparent"/>
+						<img src="assets/taler-logo.svg" style="width: 60%;  background: transparent"/>
 					</div>
 					<div style="display:flex; align-items:center; justify-content:center; gap: 10px; margin-top: -30pt;">
 						<h3 style="color:white; margin: 0; text-align: right; max-width: 600px;">
@@ -67,7 +67,7 @@
 				</section>
 				<section data-background="assets/creditcard.jpg" data-transition="fade">
 					<div class="r-stack">
-						<div style="position: absolute; top: 0; left: 0; background-color: white; width: 100%; height: 100%; opacity: 0.8;"></div>
+						<div style="background-color: white; width: 70%; height: 100%; opacity: 0.8;"></div>
 						<div class="v-stack">
 							<h2 class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
 								Traceability
@@ -87,12 +87,12 @@
 					style="height: 50%;background: transparent"/>
 				</section>
 				<section data-background="rgb(20, 22, 34)" data-auto-animate>
-					<div class="r-stack">
+					<div class="r-stack" style="width:100%;">
 						<img src="assets/crypto.png"
-							style="height:100%; background: rgb(20, 22, 34); margin: 30pt"/>
+							style="width:100%;"/>
 						<img data-id="bitcoin"						
 							src="assets/bitcoin.png"
-							style="height: 18pt; background: transparent; position: absolute; margin-top: 38pt; margin-left: 66pt"/>
+							style="height: 22pt; background: transparent; position: absolute; margin-top: 29px; margin-left:97px"/>
 					</div>
 				</section>
 				<section data-background="black" data-transition="fade">
@@ -126,29 +126,29 @@
 			<!-- Asymmetric privacy -->
 				<section data-background-iframe="assets/section.html" data-transition="slide">
 					<div class="fragment fade-up">
-						<h2 style="margin-bottom:-10pt; color:#0042b3; font-weight: bold;">
+						<h2 style="margin-bottom:-10px; color:#0042b3; font-weight: bold;">
 						Customer
 						</h2>
-						<img src="assets/incognito.svg" height="5%" style="margin-bottom: 10%"/>
+						<img src="assets/incognito.svg" height="5%" style="margin-bottom: 8%"/>
 					</div>
 					<h2 style="margin:0; color:white; font-weight: bold;">
 						Asymmetric privacy
 					</h2>
 					<div class="fragment fade-down">
-						<img src="assets/surveillance.svg" height="5%" style="margin-top: 10%"/>
-						<h2 style="margin-top:-10pt; color:#0042b3; font-weight: bold;">
+						<img src="assets/surveillance.svg" height="5%" style="margin-top: 8%"/>
+						<h2 style="margin-top:-10px; color:#0042b3; font-weight: bold;">
 						Merchant
 						</h2>
 					</div>
 				</section>
 				<section data-background-iframe="assets/section.html" data-transition="slide">
-					<div class="r-stack" style="margin-bottom: 5%; height: 200px;">
-						<img src="assets/taler-deco.svg" style="margin-left: 230px; height: 150px;; background: transparent;"/>
-						<h3 style="margin-left: 350px; margin-bottom: 70px; color:#0042b3; font-weight: bold;"> 
+					<div class="r-stack" style="margin-bottom: 90px; height: 200px;">
+						<img src="assets/taler-deco.svg" style="margin-left: 380px; height: 150px;; background: transparent;"/>
+						<h3 style="margin-left: 500px; margin-bottom: 70px; color:#0042b3; font-weight: bold;"> 
 							Taler's goals 
 						</h3>
 					</div>
-					<div style="margin:0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 200px;">
+					<div style="margin:0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 230px;">
 						<div class="fragment fade-up v-stack" data-fragment-index="1" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
 							<div style="background: white; width: 130px; height: 130px; border-radius: 30%; display: flex; align-items: center; justify-content: center;">
 								<img src="assets/incognito.svg" style="height: 70%;"/>
@@ -159,21 +159,21 @@
 								<img src="assets/tax.svg" style="height: 70%;"/>
 							</div>
 						</div>
-						<div class="fragment fade-up v-stack" data-fragment-index="3" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+						<div class="fragment fade-up v-stack" data-fragment-index="3" style="height: 200px; display: flex; flex-direction: column; align-items: center; text-align: center;">
 							<div style="background: white; width: 130px; height: 130px; border-radius: 30%; display: flex; align-items: center; justify-content: center;">
 								<img src="assets/aml.svg" style="height: 70%;"/>
 							</div>
 						</div>
 					</div>
-					<div style="height: 200px; margin-top: 5%; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 20px;">
-						<h5 class="fragment fade-up" data-fragment-index="1" style="font-weight: normal; width: 60%">Customer's <strong>anonymity</strong></h5>
-						<h5 class="fragment fade-up" data-fragment-index="2" style="font-weight: normal; width: 60%">Identified merchants (easily <strong>taxable</strong>)</h5>
-						<h5 class="fragment fade-up" data-fragment-index="3" style="font-weight: normal; width: 60%"><strong>Anti-money laundering</strong> (AML)</h5>
+					<div style="height: 200px; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 60px;">
+						<h5 class="fragment fade-up" data-fragment-index="1" style="font-weight: normal; width: 300px">Customer's <strong>anonymity</strong></h5>
+						<h5 class="fragment fade-up" data-fragment-index="2" style="font-weight: normal; width: 300px">Identified merchants (easily <strong>taxable</strong>)</h5>
+						<h5 class="fragment fade-up" data-fragment-index="3" style="font-weight: normal; width: 300px"><strong>Anti-money laundering</strong> (AML)</h5>
 					</div>
 				</section>
 				<section data-background="white" data-transition="slide" data-auto-animate>
 					<h2 style="font-weight: bold;">
-					Ideal to be used as a digital currency
+					Ideal to be used </br> as a digital currency
 					</h2>
 					<h2 data-id="not-only" class="fragment fade-up" style="font-weight: bold;">
 					...but not only
@@ -201,7 +201,7 @@
 					<div class="fragment fade-down" style="font-weight: bold; margin-bottom: 30pt;">
 						<h3 style="font-weight: bold;">
 							<i style="color:#0042b3;" class="bi bi-tv"></i>
-							Streaming service subscription
+							Streaming service subscriptions
 						</h3>
 					</div>
 				</section>
@@ -218,11 +218,13 @@
 			<!-- Taler Overview -->
 				<section data-background="assets/ecash.png" data-transition="fade">
 					<h2 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
-						How does Taler “electronic cash” work?
+						How does Taler </br> “electronic cash” work?
 					</h2>
 				</section>
 				<section data-background="white" data-transition="slide">
-					<div id="diagram" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; display: block;"></div>
+					<div style="width:100%; display: flex; align-items: center; justify-content: center;">
+						<div id="diagram" style="width: 70%; max-width: 100%; max-height: 100%; display: block;"></div>
+					</div>
 				</section>
 			<!-- Cryptographic building blocks -->
 				<section data-background-iframe="assets/section.html" data-transition="slide">
@@ -249,11 +251,11 @@
 					<div id="blind-sig3" data-id="blind-sig" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
 				<section data-background="white">
-					<div class="v-stack">
-						<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
-							Coins in Taler
-						</h3>
-						<div id="coin-struc" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
+					<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
+						Coins in Taler
+					</h3>
+					<div style="width:100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+						<div id="coin-struc" style="flex:1; display: block;"></div>
 					</div>
 				</section>
 				<section data-background="white" data-auto-animate>
@@ -285,8 +287,10 @@
 						Payment and Change
 					</h2>
 					<div class="r-stack">
-						<div data-id="bg-an" class="fragment fade" data-fragment-index="1" style="background-color: #0042b341; margin-left: 400pt; margin-top:100pt; border-radius: 30pt; width: 350pt; height: 150pt;"> </div>
-						<div data-id="payment" class="fragment fade" data-fragment-index="0" id="payment1" style="flex:1; width:100%; margin-top: 10pt;"></div>
+						<div data-id="bg-an" class="fragment fade" data-fragment-index="1" style="background-color: #0042b341; margin-right: 80px; margin-top:140px; border-radius: 30px; width: 520px; height: 200px;"> </div>
+						<div style="width:100%; display:flex; align-items: center; justify-content: center;">
+							<div data-id="payment" class="fragment fade" data-fragment-index="0" id="payment1" style="width:90%;"></div>
+						</div>
 					</div>
 				</section>
 				<section data-background="white" data-auto-animate>
@@ -294,8 +298,10 @@
 						Payment and Change
 					</h2>
 					<div class="r-stack">
-						<div data-id="bg-an" style="background-color: #0042b341; margin-left: 400pt; margin-top:100pt; border-radius: 30pt; width: 350pt; height: 300pt;"> </div>
-						<div data-id="payment" id="payment2" style="flex:1; width:100%; margin-top: 10pt;"></div>
+						<div data-id="bg-an" style="background-color: #0042b341; margin-right: 80px; margin-top:140px; border-radius: 30px; width: 520px; height: 480px;"> </div>
+						<div style="width:100%; display:flex; align-items: center; justify-content: center;">
+							<div data-id="payment" id="payment2" style="width:90%;"></div>
+						</div>
 					</div>
 				</section>
 				<section data-background="white">
@@ -303,18 +309,18 @@
 						<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 							Change requirements
 						</h3>
-						<div class="fragment fade-down" style="margin: 30pt;">
+						<div class="fragment fade-down" style="margin: 0 350px 0 350px;">
 							<h4> <strong>Anonymity</strong> </h4>
 							<h6 style="background-color: #0042b341; padding: 10pt; border-radius: 30pt; font-weight: normal;"> Spent coins and change must be <strong>unrelated</strong> </h6>
 						</div>
-						<div class="fragment fade-down" style="margin: 30pt;">
+						<div class="fragment fade-down" style="margin: 30px 350px 0 350px;">
 							<h4> <strong>Anti-money laundering</strong> </h4>
 							<h6 style="background-color: #0042b341; padding: 10pt; border-radius: 30pt; font-weight: normal;">Change <strong>ownership</strong> cannot be transferred </h6>
 						</div>
 					</div>
 				</section>
 				<section data-background="white" data-auto-animate>
-					<div class="v-stack">
+					<div class="v-stack" style="width:100%; align-items: center; justify-content: center;">
 						<h3 style="display: flex; gap: 15pt; align-items: center; justify-content: center;">
 							<div data-id="mlt" style="color:#0042b3; font-weight: bold;">
 								Money-laundering in Taler
@@ -323,14 +329,14 @@
 								?
 							</div>
 						</h3>
-						<div class="r-stack">
+						<div class="r-stack" style="width:100%; align-items: center; justify-content: center;">
 							<div data-id="bg-cheat" style="width: 430pt; height: 170pt; background-color: #0042b341; margin-left: 130pt; margin-top:5pt; border-radius: 30pt;"></div>
 							<div id="cheat1" style="z-index: 1; margin-left: 150pt; width: 500pt; max-width: 100%; max-height: 100%; display: block;"></div>
 						</div>
 					</div>
 				</section>
 				<section data-background="white" data-auto-animate>
-					<div class="v-stack">
+					<div class="v-stack" style="width:100%; align-items: center; justify-content: center;">
 						<h3 style="display: flex; gap: 15pt; align-items: center; justify-content: center;">
 							<div data-id="mlt" style="color:#0042b3; font-weight: bold;">
 								Money-laundering in Taler
@@ -339,14 +345,14 @@
 								?
 							</div>
 						</h3>
-						<div class="r-stack">
+						<div class="r-stack" style="width:100%; align-items: center; justify-content: center;">
 							<div data-id="bg-cheat" style="width: 430pt; height: 400pt; background-color: #0042b341; margin-top:0pt; margin-left: 130pt; border-radius: 30pt;"></div>
 							<div id="cheat2" style="z-index: 1; margin-left: 150pt; width: 500pt; max-width: 100%; max-height: 100%; display: block;"></div>
 						</div>
 					</div>
 				</section>
 				<section data-background="white" data-auto-animate>
-					<div class="v-stack">				
+					<div class="v-stack" style="width:100%; align-items: center; justify-content: center;">				
 						<h3 style="display: flex; gap: 15pt; align-items: center; justify-content: center;">
 							<div style="color:#0042b3; font-weight: bold;">
 								Fixing
@@ -355,7 +361,7 @@
 								Money-laundering in Taler
 							</div>
 						</h3>
-						<div class="r-stack">
+						<div class="r-stack" style="width:100%; align-items: center; justify-content: center;">
 							<div data-id="bg-cheat" style="width: 430pt; height: 430pt; background-color: #0042b341; margin-left: 130pt; margin-bottom:10pt; border-radius: 30pt;"></div>
 							<div id="cheat3" style="z-index: 1; margin-left: 150pt; width: 500pt; max-width: 100%; max-height: 100%; display: block;"></div>
 						</div>
@@ -368,43 +374,24 @@
 							border-radius: 30pt;
 							transition: filter 0.4s ease, opacity 0.3s;
 						}
-						.box.blurred {
-							filter: blur(5px);
-							opacity: 0.5;
-						}
-						.overlay {
-							padding-bottom: 20pt;
-						}
 					</style>
 					<div class="v-stack">
 						<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 							Change requirements (part 2)
 						</h3>
-						<div id="anon-block" style="margin: 20pt" class="fragment" data-fragment-index="1">
+						<div id="anon-block" style="margin: 0 200px 0 200px;" class="fragment" data-fragment-index="1">
 							<h4><strong>Anonymity</strong></h4>
 							<div class="r-stack">
 								<h6 class="box" style="background:#0042b341; font-weight: normal;">
 									<strong>No one</strong> (except coin's owner) can <strong>correlate</strong> spent coins and change
 								</h6>
-								<h6 class="fragment fade-in overlay"
-									data-fragment-index="3"
-									data-target="anon"
-									style="margin-bottom: 10pt; font-weight: normal; color:#0042b3;">
-									Customer's responsibility
-								</h6>
 							</div>
 						</div>
-						<div id="aml-block" class="fragment" data-fragment-index="2">
+						<div id="aml-block" style="margin: 30px 200px 0 200px;" class="fragment" data-fragment-index="2">
 							<h4><strong>Anti-money laundering</strong></h4>
 							<div class="r-stack">
 								<h6 class="box" style="background:#0042b341; font-weight: normal;">
 									An owner can always <strong>re-obtain change</strong> from their coins
-								</h6>
-								<h6 class="fragment fade-in overlay"
-									data-fragment-index="4"
-									data-target="aml"
-									style="margin-bottom: 10pt; font-weight: normal; color:#0042b3;">
-									Exchange's responsibility
 								</h6>
 							</div>
 						</div>
@@ -423,7 +410,9 @@
 						<h2 data-id="refresh-prot-text" style="margin:0; color:#0042b3; font-weight: bold;">
 							Refresh protocol
 						</h2>
-						<img src="assets/diagram-recap.svg" style="height: 100%; background: transparent"/>
+						<div style="width:100%; display: flex; align-items: center; justify-content: center;">
+							<img src="assets/diagram-recap.svg" style="width: 70%; background: transparent"/>
+						</div>
 					</div>
 				</section>
 				<section data-background="white" data-transition="slide">
@@ -432,7 +421,7 @@
 							Re-obtaining a refreshed coin
 						</h3>
 						<div style="width:100%; display:flex; justify-content:center;">
-							<div id="reobtain-coin" style="width:100%; max-width: 100%; max-height: 100%; display: block;"></div>
+							<div id="reobtain-coin" style="width:80%; max-width: 100%; max-height: 100%; display: block;"></div>
 						</div>
 					</div>
 				</section>
@@ -441,7 +430,9 @@
 					<h2 style="color:#0042b3; font-weight: bold; font-size: 36pt">
 						Use case: Streaming service subscription
 					</h2>
-					<div data-id="streaming" class="fragment fade" data-fragment-index="0" id="streaming" style="flex:1; height:100%; margin-top: 10pt;"></div>
+					<div style="width:100%; display:flex; align-items: center; justify-content: center;">
+						<div data-id="streaming" id="streaming" style="width:90%;"></div>
+					</div>
 				</section>
 			<!-- Final -->
 				<section data-background-image="assets/paper.jpg">
@@ -468,14 +459,14 @@
 						</h2>
 					</div>
 				</section>
-				<section data-background="white"  data-auto-animate>
+				<section data-background="white" data-auto-animate>
 					<div class="v-stack">
 						<h2 data-id="end" style="color:#0042b3; font-weight: bold;">
 							The End
 						</h2>
 					</div>
-					<div style="display:flex; align-items:flex-start; gap: 10px;">
-						<div class="v-stack">
+					<div style="display:flex; align-items:flex-start; gap: 10px; justify-content:center;">
+						<div class="v-stack" style="width:650px; justify-content:center;">
 							<div style="border: 2px solid #0042b3; margin-bottom: 10px; height: 400px; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
 								<img src="assets/diagram-recap.svg" style="height: 100%; width: 100%; object-fit: contain; background: transparent;"/>
 							</div>
@@ -517,6 +508,8 @@
 		<script src="logic/blur.js"></script>
 		<script>
 			Reveal.initialize({
+				width: 1280,
+  				height: 720,
 				hash: true,
 				preloadIframes: true,
 				autoAnimateUnmatched: false,
