@@ -41,8 +41,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-id="slides">
-				<section data-background-gradient="linear-gradient(to left, #0042b3, #222)" data-id="mainbg" data-transition="slide">				
+				<section>
+				<section id="title" data-background-gradient="linear-gradient(to left, #0042b3, #222)" data-id="mainbg" data-transition="slide">				
 					<div style="display:flex; align-items:center; justify-content:center; width: 100%;">
 						<img src="assets/taler-logo.svg" style="width: 60%;  background: transparent"/>
 					</div>
@@ -58,14 +58,14 @@
 					<h6 style="font-size: 24pt; color: white;">Elisa Pioldi - Security in Times of Surveillance</h6>
 				</section>
 				<!-- Why Taler -->
-				<section data-background-iframe="assets/section.html" data-transition="slide">
+				<section id="why-taler" data-background-iframe="assets/section.html" data-transition="slide">
 					<h2 style="margin:0; color:white; font-weight: bold;">
 						Why Taler?
 					</h2>
 				</section>
-				<section data-background="assets/creditcard.jpg" data-transition="slide">
+				<section id="classic-payment-systems" data-background="assets/creditcard.jpg" data-transition="slide">
 				</section>
-				<section data-background="assets/creditcard.jpg" data-transition="fade">
+				<section id="classic-payment-systems-downsides" data-background="assets/creditcard.jpg" data-transition="fade">
 					<div class="r-stack">
 						<div style="background-color: white; width: 70%; height: 100%; opacity: 0.8;"></div>
 						<div class="v-stack">
@@ -81,12 +81,12 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="assets/creditcard-overlay.png" data-transition="slide" data-auto-animate>
+				<section id="bicoin" data-background="assets/creditcard-overlay.png" data-transition="slide" data-auto-animate>
 					<img data-id="bitcoin"						
 					src="assets/bitcoin.png"
 					style="height: 50%;background: transparent"/>
 				</section>
-				<section data-background="rgb(20, 22, 34)" data-auto-animate>
+				<section id="cryptocurrencies" data-background="rgb(20, 22, 34)" data-auto-animate>
 					<div class="r-stack" style="width:100%;">
 						<img src="assets/crypto.png"
 							style="width:100%;"/>
@@ -95,13 +95,13 @@
 							style="height: 22pt; background: transparent; position: absolute; margin-top: 29px; margin-left:97px"/>
 					</div>
 				</section>
-				<section data-background="black" data-transition="fade">
+				<section id="is-it-easy" data-background="black" data-transition="fade">
 					<h2  style="margin: 30pt; color:white; font-weight: bold;">
 						Is it so "easy"...?
 					</h2>
 				</section>
-				<section data-background-iframe="https://www.web3isgoinggreat.com/" data-background-interactive data-transition="fade"></section>
-				<section data-background="black" data-transition="fade">
+				<section id="web3-going-great" data-background-iframe="https://www.web3isgoinggreat.com/" data-background-interactive data-transition="fade"></section>
+				<section id="cryptocurrencies-downsides" data-background="black" data-transition="fade">
 					<h2 style="margin:0; margin: 30pt; color:white; font-weight: bold;">
 						Frauds
 					</h2>
@@ -115,7 +115,7 @@
 						Money laundering
 					</h2>
 				</section>
-				<section data-background="black" data-transition="slide">
+				<section id="real-world-rules" data-background="black" data-transition="slide">
 					<h2  style="margin: 30pt; color:white; font-weight: bold;">
 						We live in a real world
 					</h2>
@@ -124,7 +124,7 @@
 					</h2>
 				</section>
 			<!-- Asymmetric privacy -->
-				<section data-background-iframe="assets/section.html" data-transition="slide">
+				<section id="asymmetric-privacy" data-background-iframe="assets/section.html" data-transition="slide">
 					<div class="fragment fade-up">
 						<h2 style="margin-bottom:-10px; color:#0042b3; font-weight: bold;">
 						Customer
@@ -141,7 +141,7 @@
 						</h2>
 					</div>
 				</section>
-				<section data-background-iframe="assets/section.html" data-transition="slide">
+				<section id="taler-goals" data-background-iframe="assets/section.html" data-transition="slide">
 					<div class="r-stack" style="margin-bottom: 90px; height: 200px;">
 						<img src="assets/taler-deco.svg" style="margin-left: 380px; height: 150px;; background: transparent;"/>
 						<h3 style="margin-left: 500px; margin-bottom: 70px; color:#0042b3; font-weight: bold;"> 
@@ -171,7 +171,7 @@
 						<h5 class="fragment fade-up" data-fragment-index="3" style="font-weight: normal; width: 300px"><strong>Anti-money laundering</strong> (AML)</h5>
 					</div>
 				</section>
-				<section data-background="white" data-transition="slide" data-auto-animate>
+				<section id="digital-currency" data-background="white" data-transition="slide" data-auto-animate>
 					<h2 style="font-weight: bold;">
 					Ideal to be used </br> as a digital currency
 					</h2>
@@ -179,7 +179,7 @@
 					...but not only
 					</h2>
 				</section>
-				<section data-background="white" data-transition="slide" data-auto-animate>
+				<section id="other-use-cases" data-background="white" data-transition="slide" data-auto-animate>
 					<h2 data-id="not-only" style="color:#0042b3; font-weight: bold; margin-bottom: 30pt;">
 					...but not only
 					</h2>
@@ -205,7 +205,7 @@
 						</h3>
 					</div>
 				</section>
-				<section data-background="white" data-transition="slide">
+				<section id="deployed-real-world" data-background="white" data-transition="slide">
 					<h2 style="color:#0042b3; font-weight: bold;">
 					Deployed in real world!
 					</h2>
@@ -213,44 +213,44 @@
 					Switzerland only (for now)
 					</h3>
 				</section>
-				<section data-background-iframe="https://taler-ops.ch/en/map.html" data-background-interactive data-transition="fade">
+				<section id="taler-map" data-background-iframe="https://taler-ops.ch/en/map.html" data-background-interactive data-transition="fade">
 				</section>
 			<!-- Taler Overview -->
-				<section data-background="assets/ecash.png" data-transition="fade">
+				<section id="ecash" data-background="assets/ecash.png" data-transition="fade">
 					<h2 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
 						How does Taler </br> “electronic cash” work?
 					</h2>
 				</section>
-				<section data-background="white" data-transition="slide">
+				<section id="overview" data-background="white" data-transition="slide">
 					<div style="width:100%; display: flex; align-items: center; justify-content: center;">
 						<div id="diagram" style="width: 70%; max-width: 100%; max-height: 100%; display: block;"></div>
 					</div>
 				</section>
 			<!-- Cryptographic building blocks -->
-				<section data-background-iframe="assets/section.html" data-transition="slide">
+				<section id="cryptography" data-background-iframe="assets/section.html" data-transition="slide">
 					<h2 style="margin:0; color:white; font-weight: bold;">
 						A bit of cryptography
 					</h2>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="blind-signatures-1" data-background="white" data-auto-animate>
 					<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Blind Signatures (e-cash)
 					</h3>
 					<div id="blind-sig1" data-id="blind-sig" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="blind-signatures-2" data-background="white" data-auto-animate>
 					<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Blind Signatures (e-cash)
 					</h3>
 					<div id="blind-sig2" data-id="blind-sig" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="blind-signatures-3" data-background="white" data-auto-animate>
 					<h3 data-id="bs-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Blind Signatures (e-cash)
 					</h3>
 					<div id="blind-sig3" data-id="blind-sig" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
-				<section data-background="white">
+				<section id="coins-in-taler" data-background="white">
 					<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Coins in Taler
 					</h3>
@@ -258,31 +258,31 @@
 						<div id="coin-struc" style="flex:1; display: block;"></div>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="withdraw-1" data-background="white" data-auto-animate>
 					<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Withdrawing coins
 					</h3>
 					<div id="withdraw1" data-id="withdraw" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="withdraw-2" data-background="white" data-auto-animate>
 					<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Withdrawing coins
 					</h3>
 					<div id="withdraw2" data-id="withdraw" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="withdraw-3" data-background="white" data-auto-animate>
 					<h3 data-id="withdraw-title" style="margin: 30pt; color:#0042b3; font-weight: bold;">
 						Withdrawing coins
 					</h3>
 					<div id="withdraw3" data-id="withdraw" style="flex:1; max-width: 100%; max-height: 100%; display: block; margin-top: 60pt;"></div>
 				</section>
 			<!-- Payment and change -->
-				<section data-background-iframe="assets/section.html" data-auto-animate data-transition="slide">
+				<section id="payment-and-change" data-background-iframe="assets/section.html" data-auto-animate data-transition="slide">
 					<h2 data-id="pay-change" style="color:white; font-weight: bold;">
 						Payment and Change
 					</h2>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="payment-change-1" data-background="white" data-auto-animate>
 					<h2 data-id="pay-change" style="color:#0042b3; font-weight: bold; font-size: 36pt">
 						Payment and Change
 					</h2>
@@ -293,7 +293,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="payment-change-2" data-background="white" data-auto-animate>
 					<h2 data-id="pay-change" style="color:#0042b3; font-weight: bold; font-size: 36pt">
 						Payment and Change
 					</h2>
@@ -304,7 +304,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white">
+				<section id="change-requirements" data-background="white">
 					<div class="v-stack">
 						<h3 style="margin: 30pt; color:#0042b3; font-weight: bold;">
 							Change requirements
@@ -319,7 +319,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="money-laundering-1" data-background="white" data-auto-animate>
 					<div class="v-stack" style="width:100%; align-items: center; justify-content: center;">
 						<h3 style="display: flex; gap: 15pt; align-items: center; justify-content: center;">
 							<div data-id="mlt" style="color:#0042b3; font-weight: bold;">
@@ -335,7 +335,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="money-laundering-2" data-background="white" data-auto-animate>
 					<div class="v-stack" style="width:100%; align-items: center; justify-content: center;">
 						<h3 style="display: flex; gap: 15pt; align-items: center; justify-content: center;">
 							<div data-id="mlt" style="color:#0042b3; font-weight: bold;">
@@ -351,7 +351,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="fixing-money-laundering" data-background="white" data-auto-animate>
 					<div class="v-stack" style="width:100%; align-items: center; justify-content: center;">				
 						<h3 style="display: flex; gap: 15pt; align-items: center; justify-content: center;">
 							<div style="color:#0042b3; font-weight: bold;">
@@ -367,7 +367,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white">
+				<section id="change-requirements-2" data-background="white">
 					<style>
 						.box {
 							padding: 10pt;
@@ -397,7 +397,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white" data-transition="slide" data-auto-animate>
+				<section id="refresh-protocol-intro" data-background="white" data-transition="slide" data-auto-animate>
 					<h3 style="margin-bottom:10pt; color:#0042b3; font-weight: bold;">
 					How?
 					</h3>
@@ -405,7 +405,7 @@
 					Refresh protocol
 					</h2>
 				</section>
-				<section data-background="white" data-transition="slide" data-auto-animate>
+				<section id="refresh-protocol" data-background="white" data-transition="slide" data-auto-animate>
 					<div class="v-stack">
 						<h2 data-id="refresh-prot-text" style="margin:0; color:#0042b3; font-weight: bold;">
 							Refresh protocol
@@ -415,7 +415,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-background="white" data-transition="slide">
+				<section id="reobtain-refreshed-coin" data-background="white" data-transition="slide">
 					<div class="v-stack">
 						<h3 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
 							Re-obtaining a refreshed coin
@@ -425,7 +425,7 @@
 						</div>
 					</div>
 				</section>
-			<!-- Refresh protocol use cases -->
+			<!-- Refresh protocol use cases 
 				<section data-background="white" data-transition="slide">
 					<h2 style="color:#0042b3; font-weight: bold; font-size: 36pt">
 						Use case: Streaming service subscription
@@ -434,8 +434,9 @@
 						<div data-id="streaming" id="streaming" style="width:90%;"></div>
 					</div>
 				</section>
+			-->
 			<!-- Final -->
-				<section data-background-image="assets/paper.jpg">
+				<section id="post-quantum" data-background-image="assets/paper.jpg">
 					<div class="v-stack">
 						<h2 style="color:#0042b3; font-weight: bold; font-family: 'write me a song'; font-weight: 800; font-size: 60pt">
 							Work in progress
@@ -452,14 +453,14 @@
 						</h4>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="the-end" data-background="white" data-auto-animate>
 					<div class="v-stack">
 						<h2 data-id="end" style="color:#0042b3; font-weight: bold;">
 							The End
 						</h2>
 					</div>
 				</section>
-				<section data-background="white" data-auto-animate>
+				<section id="the-end-recap" data-background="white" data-auto-animate>
 					<div class="v-stack">
 						<h2 data-id="end" style="color:#0042b3; font-weight: bold;">
 							The End
